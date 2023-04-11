@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+
+	<title>Escolha de assentos de ônibus</title>
+	<style>
+		.available {
+			background-color: green;
+		}
+
+		.selected {
+			background-color: red;
+		}
+
+		#counter {
+			margin-top: 20px;
+		}
+		td{
+			border-radius: 25px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Escolha </h1>
+	<p>Selecione os assentos que deseja reservar:</p>
+	<table>
+		<tbody>
+			<tr>
+				<td class="available">1</td>
+				<td class="available">2</td>
+				<td class="available">3</td>
+				<td class="available">4</td>
+			</tr>
+			<tr>
+				<td class="available">5</td>
+				<td class="available">6</td>
+				<td class="available">7</td>
+				<td class="available">8</td>
+			</tr>
+			<tr>
+				<td class="available">9</td>
+				<td class="available">10</td>
+				<td class="available">11</td>
+				<td class="available">12</td>
+			</tr>
+			<tr>
+				<td class="available">13</td>
+				<td class="available">14</td>
+				<td class="available">15</td>
+				<td class="available">16</td>
+			</tr>
+			<tr>
+				<td class="available">17</td>
+				<td class="available">18</td>
+				<td class="available">19</td>
+				<td class="available">20</td>
+			</tr>
+			<tr>
+				<td class="available">21</td>
+				<td class="available">22</td>
+				<td class="available">23</td>
+				<td class="available">24</td>
+			</tr>
+			<tr>
+				<td class="available">25</td>
+				<td class="available">26</td>
+				<td class="available">27</td>
+				<td class="available">28</td>
+			</tr>
+			<tr>
+				<td class="available">29</td>
+				<td class="available">30</td>
+				<td class="available">31</td>
+				<td class="available">32</td>
+			</tr>
+		</tbody>
+	</table>
+	<p id="counter">Assentos selecionados: 0</p>
+
+	<script>
+		var counter = 0;
+		var seats = document.querySelectorAll('.available');
+
+		for (var i = 0; i < seats.length; i++) {
+			seats[i].addEventListener('click', function() {
+				if (this.classList.contains('available')) {
+					this.classList.remove('available');
+					this.classList.add('selected');
+					counter++;
+				} else {
+					this.classList.remove('selected');
+					this.classList.add('available');
+					counter--;
+				}
+				//document.getElementById('counter').innerHTML = 'Assentos selecionados: ' + counter;
+			});
+		}
+	</script>
+</body>
+</html>

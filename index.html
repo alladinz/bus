@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>VENDA DE PASSAGENS</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .principal
+        {
+            position: relative;
+        }
+        .P00
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:172px; 
+            background-color: green;
+        }
+        .P01
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:172px; 
+            background-color: green;
+        }
+        .P10
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:260px; 
+            background-color: green;
+        }
+        .P11
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:260px;
+            background-color: green;
+        }
+        .P20
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:350px; 
+            background-color: green;
+        }
+        .P21
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:350px; 
+            background-color: green;
+        }
+        .P30
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:440px; 
+            background-color: green;
+        }
+        .P31
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:440px; 
+            background-color: green;
+        }
+        .P40
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:530px; 
+            background-color: green;
+        }
+        .P41
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:530px; 
+            background-color: green;
+        }
+        .P50
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:619px; 
+            background-color: green;
+        }
+        .P51
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:619px; 
+            background-color: green;
+        }
+        .P02
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:172px; 
+            background-color: green;
+        }
+        .P03
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:172px; 
+            background-color: green;
+        }
+        .P12
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:260px; 
+            background-color: green;
+        }
+        .P13
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:260px; 
+            background-color: green;
+        }
+        .P22
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:350px; 
+            background-color: green;
+        }
+        .P23
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:350px; 
+            background-color: green;
+        }
+        .P32
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:440px; 
+            background-color: green;
+        }
+        .P33
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:440px; 
+            background-color: green;
+        }
+        .P42
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:530px; 
+            background-color: green;
+        }
+        .P43
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:530px; 
+            background-color: green;
+        }
+        .P52
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:619px; 
+            background-color: green;
+        }
+        .P53
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:619px; 
+            background-color: green;
+        }
+        .contador
+        {
+            font-size: 30px;
+            width: 500px;
+            background-color: yellow;
+            text-align: center;
+        }
+        .marcado1{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:172px; 
+            background-color: red;
+        }
+        .marcado{
+            background-color: red;
+        }
+        .marcado2{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:172px; 
+            background-color: red;
+        }
+        .disponivel{
+            background-color: green;
+        }
+        .vermelho
+        {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body onload="Limpar();">
+
+    <div class="principal">
+        <img src="onibus.jpg">
+
+        <div onclick="Preencher('P00');" class="P00" id="P00"></div>  <!-- PRIMEIRA FILEIRA -->
+        <div onclick="Preencher('P01');" class="P01" id="P01"></div>
+        <div onclick="Preencher('P02');" class="P02" id="P02"></div>
+        <div onclick="Preencher('P03');" class="P03" id="P03"></div>
+
+        <div onclick="Preencher('P10');" class="P10" id="P10"></div>   <!-- SEGUNDA FILEIRA -->
+        <div onclick="Preencher('P11');" class="P11" id="P11"></div>
+        <div onclick="Preencher('P12');" class="P12" id="P12"></div>
+        <div onclick="Preencher('P13');" class="P13" id="P13"></div>
+
+        <div onclick="Preencher('P20');" class="P20" id="P20"></div>   <!-- TERCEIRA FILEIRA -->
+        <div onclick="Preencher('P21');" class="P21" id="P21"></div>
+        <div onclick="Preencher('P22');" class="P22" id="P22"></div>
+        <div onclick="Preencher('P23');" class="P23" id="P23"></div>
+
+        <div onclick="Preencher('P30');" class="P30" id="P30"></div>  <!-- QUARTA FILEIRA -->
+        <div onclick="Preencher('P31');" class="P31" id="P31"></div>
+        <div onclick="Preencher('P32');" class="P32" id="P32"></div>
+        <div onclick="Preencher('P33');" class="P33" id="P33"></div>
+
+        <div onclick="Preencher('P40');" class="P40" id="P40"></div>   <!-- QUINTA FILEIRA -->
+        <div onclick="Preencher('P41');" class="P41" id="P41"></div>
+        <div onclick="Preencher('P42');" class="P42" id="P42"></div>
+        <div onclick="Preencher('P43');" class="P43" id="P43"></div>
+
+        <div onclick="Preencher('P50');" class="P50" id="P50"></div>   <!-- SEXTA FILEIRA -->
+        <div onclick="Preencher('P51');" class="P51" id="P51"></div>
+        <div onclick="Preencher('P52');" class="P52" id="P52"></div>
+        <div onclick="Preencher('P53');" class="P53" id="P53"></div>
+    </div>
+    <br>
+    <p class="contador" id="contador">Assentos selecionados: 0</p>
+</body>
+
+<script src="script.js">
+    function Preencher(id){
+    var div = document.getElementById(id);
+    div.classList.toggle("vermelho");
+}
+</script>
+
+</html>
