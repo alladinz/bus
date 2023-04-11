@@ -18,22 +18,41 @@ for (var i = 0; i < assento1.length; i++) {
     });
 }
 
-for (var i = 0; i < assento2.length; i++) {
-    assento2[i].addEventListener('click', function() {
-        if (this.classList.contains('P00')) {
-            this.classList.remove('P00');
-            this.classList.add('marcado2');
-            contador++;
-        } else {
-            this.classList.remove('marcado2');
-            this.classList.add('P00');
-            contador--;
-        }
-        document.getElementById('contador').innerHTML = contador;
-    });
+/*function Preencher(meu_id){
+    var div = document.getElementById(meu_id);
+    div.classList.toggle("vermelho");
+
+    if (div.classList.contains('vermelho')){
+        contador++;
+    } else{
+        contador--;
+    }
+    document.getElementById('contador').innerHTML = 'Assentos selecionados: ' + contador;
 }*/
 
-function Preencher(id){
-    var div = document.getElementById(id);
-    div.classList.toggle("vermelho");
+var contador = 0;
+
+function Limpar(){
+
+    for(linha= 0; linha<=5; linha++){
+    
+        for(coluna=0; coluna <=3; coluna++){
+    
+            meu_id = "P" + linha + coluna;
+
+            document.getElementById(meu_id).style.backgroundColor = "green";
+        }
+    }
+}
+
+function Preencher(meu_id){
+    
+    if(document.getElementById(meu_id).style.backgroundColor == "green"){
+        document.getElementById(meu_id).style.backgroundColor = "red"
+        contador++;
+    } else{
+        document.getElementById(meu_id).style.backgroundColor = "green"
+        contador--;
+    }
+    document.getElementById('contador').innerHTML = 'Assentos selecionados: ' + contador;
 }

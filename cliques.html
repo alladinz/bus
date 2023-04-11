@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contador de Cliques</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 32px;
+      }
+      
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="cachorro.png" alt="Cachorro" id="cachorro">
+    <p>Clique no cachorro para começar</p>
+    <p id="contador"></p>
+    <script>
+      let contador = 0;
+      let tempoInicial = 0;
+      let tempoFinal = 0;
+      let mediaCliques = 0;
+      
+      const cachorro = document.getElementById("cachorro");
+      const contadorElemento = document.getElementById("contador");
+      
+      cachorro.addEventListener("click", function() {
+        contador++;
+        contadorElemento.innerText = `Cliques: ${contador}`;
+        
+        if (contador === 1) {
+          tempoInicial = performance.now();
+        } else if (contador === 10) {
+          tempoFinal = performance.now();
+          mediaCliques = (contador / ((tempoFinal - tempoInicial) / 1000)).toFixed(2);
+          contadorElemento.innerText += ` - Média de cliques por segundo: ${mediaCliques}`;
+          cachorro.removeEventListener("click", arguments.callee);
+        }
+      });
+    </script>
+  </body>
+</html>
