@@ -7,18 +7,23 @@
     <title>MATRIZES</title>
 </head>
 <body>
-    <button oneclick="executar();">
-        executar
+    <button onclick="Executar();">
+        Executar
     </button>
     <div id="resposta"> --- </div>
 </body>
 <script>
+
     function Executar()
     {
         matriz_A = [ [10,9,6],
                      [3,1,0 ],
                      [4,7,20]
                     ]
-    }
+
+        resposta.innerHTML = matriz_A[2][1] + matriz_A[0][2]
+
+        maior = matriz_A[0][0];
+    }   
 </script>
 </html>
