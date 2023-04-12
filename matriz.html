@@ -21,9 +21,23 @@
                      [4,7,20]
                     ]
 
-        resposta.innerHTML = matriz_A[2][1] + matriz_A[0][2]
 
-        maior = matriz_A[0][0];
+        menor = matriz_A[0][0]
+        soma = 0
+        contador = 0
+        for(linha=0; linha<=2; linha++){
+            for(coluna=0; coluna<=2; coluna++)
+            {
+                soma = soma + matriz_A[linha][coluna]
+                contador = contador + 1
+
+                if (menor > matriz_A[linha][coluna])
+            {
+                menor = matriz_A[linha][coluna]
+            }
+            }
+        }
+        resposta.innerHTML = soma/contador
     }   
 </script>
 </html>
